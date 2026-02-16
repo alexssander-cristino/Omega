@@ -1,0 +1,56 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 40px;
+}
+
+/* CONTAINER DOS DOIS CARROS */
+.carros {
+    display: flex; 
+    align-items: flex-start;
+    gap: 150px;               /* espaço entre os dois carros */
+    padding: 40px;
+}
+
+/* CADA CARRO */
+.omega,
+.caravan {
+    display: flex;
+    flex-direction: column;   /* coloca tudo em coluna */
+    align-items: flex-start;  /* alinha à esquerda */
+    max-width: 400px;
+}
+
+/* TÍTULO DO CARRO */
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* IMAGEM */
+.omega img,
+.caravan img {
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+/* TEXTO */
+p {
+    line-height: 1.6;
+    font-size: 15px;
+}
