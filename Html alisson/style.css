@@ -17,6 +17,7 @@ h1 {
     text-align: center;
     margin: 40px 0;
     font-size: 40px;
+    padding-top: 15px;
 }
 
 /* CONTAINER DOS DOIS CARROS */
@@ -29,7 +30,8 @@ h1 {
 
 /* CADA CARRO */
 .omega,
-.caravan {
+.caravan,
+ .omegasuprema {
     display: flex;
     flex-direction: column;   /* coloca tudo em coluna */
     align-items: flex-start;  /* alinha à esquerda */
@@ -44,7 +46,9 @@ h2 {
 
 /* IMAGEM */
 .omega img,
-.caravan img {
+.caravan img,
+.omegasuprema img
+ {
     width: 280px;
     margin-bottom: 20px;
 }
@@ -53,4 +57,17 @@ h2 {
 p {
     line-height: 1.6;
     font-size: 15px;
+}
+
+.chevette img {
+    width: 290px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;   /* coloca tudo em coluna */
+    align-items: flex-start;  /* alinha à esquerda */
+    max-width: 400px;
+}
+
+.menu {
+    border-bottom: 1px solid gray;
 }
