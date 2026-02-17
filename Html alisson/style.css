@@ -1,73 +1,51 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* BODY */
 body {
     background-color: black;
     font-family: Arial, sans-serif;
     color: white;
 }
 
-/* TÍTULO PRINCIPAL */
-h1 {
+.menu {
+    border-bottom: 2px solid gray;
+    padding: 20px;
     text-align: center;
-    margin: 40px 0;
-    font-size: 40px;
-    padding-top: 15px;
 }
 
-/* CONTAINER DOS DOIS CARROS */
 .carros {
-    display: flex; 
-    align-items: flex-start;
-    gap: 150px;               /* espaço entre os dois carros */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* impede esticar quando um cresce */
+    gap: 40px;
     padding: 40px;
 }
 
-/* CADA CARRO */
-.omega,
-.caravan,
- .omegasuprema {
-    display: flex;
-    flex-direction: column;   /* coloca tudo em coluna */
-    align-items: flex-start;  /* alinha à esquerda */
-    max-width: 400px;
-}
 
-/* TÍTULO DO CARRO */
-h2 {
-    margin-bottom: 20px;
-    font-size: 22px;
-}
-
-/* IMAGEM */
-.omega img,
-.caravan img,
-.omegasuprema img
- {
+.card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 15px;
     width: 280px;
-    margin-bottom: 20px;
-}
-
-/* TEXTO */
-p {
-    line-height: 1.6;
-    font-size: 15px;
-}
-
-.chevette img {
-    width: 290px;
-    margin-bottom: 10px;
+    min-height: 300px; /* altura padrão quando fechado */
+    text-align: center;
+    transition: 0.3s;
     display: flex;
-    flex-direction: column;   /* coloca tudo em coluna */
-    align-items: flex-start;  /* alinha à esquerda */
-    max-width: 400px;
+    flex-direction: column;
 }
 
-.menu {
-    border-bottom: 1px solid gray;
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.info {
+    display: none;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: left;
 }

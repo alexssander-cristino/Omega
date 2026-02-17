@@ -1,91 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste</title>
+    <title>Carros Antigos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section>
-    <nav class="menu">
+<nav class="menu">
     <h1>Carros antigos</h1>
-    </nav>
+</nav>
 
-    <div class="carros">
+<div class="carros">
 
-        <section class="omega">
-            <h2>Omega 4.1 1995 CD</h2>
-            <img src="imgs/o.png" alt="Omega">
+    <!-- OMEGA -->
+    <div class="card">
+        <h2>Omega 4.1 1995 CD</h2>
+        <img src="imgs/o.png" alt="Omega" onclick="toggle('omega')">
+        <div id="omega" class="info">
+            <p>
+                Modelo: Chevrolet Omega CD <br>
+                Sedan 4 portas <br>
+                Motor: 6 cilindros em linha 4.1 <br>
+                168 cv <br>
+                Tração: traseira <br>
+                Manual de 5 marchas <br>
+                Velocidade máxima: ~212–215 km/h <br>
+                0–100 km/h: ~9,5–10,5 s <br>
+                Consumo cidade: ~5,8–6 km/l <br>
+                Consumo estrada: ~9–9,7 km/l <br>
+                Tanque: ~75 litros <br>
+                Comprimento: ~4.738 mm <br>
+                Largura: ~1.760 mm <br>
+                Entre-eixos: ~2.730 mm <br>
+                Direção hidráulica <br>
+                Peso: ~1.449–1.469 kg <br>
+                Ar-condicionado automático digital <br>
+                Vidros elétricos nas 4 portas <br>
+                Trava elétrica das portas <br>
+                Retrovisores elétricos <br>
+            </p>
+        </div>
+    </div>
 
-            <div class="omega-texto">
-                <p>
-                    Modelo: Chevrolet Omega CD <br>
-                    Sedan 4 portas <br>
-                    Motor: 6 cilindros em linha 4.1 <br>
-                    168 cv <br>
-                    Tração: traseira <br>
-                    Manual de 5 marchas <br>
-                    Velocidade máxima: ~212–215 km/h <br>
-                    0–100 km/h: ~9,5–10,5 s <br>
-                    Consumo cidade: ~5,8–6 km/l <br>
-                    Consumo estrada: ~9–9,7 km/l <br>
-                    Tanque: ~75 litros (algumas fichas dizem 70 l) <br>
-                    Comprimento: ~4.738 mm <br>
-                    Largura: ~1.760 mm <br>
-                    Entre-eixos: ~2.730 mm <br>
-                    Direção hidráulica <br>
-                    Peso: ~1.449–1.469 kg <br>
-                    Ar-condicionado automático digital <br>
-                    Vidros elétricos nas 4 portas <br>
-                    Trava elétrica das portas <br>
-                    Retrovisores elétricos <br>
-                </p>
-            </div>
-        </section>
+    <!-- CARAVAN -->
+    <div class="card">
+        <h2>Caravan Comodoro 1990</h2>
+        <img src="imgs/caravan.png" alt="Caravan" onclick="toggle('caravan')">
+        <div id="caravan" class="info">
+            <p>
+                Modelo: Chevrolet Caravan Comodoro 1990 <br>
+                Perua 2 portas <br>
+                Motor: 6 cilindros em linha 4.1 <br>
+                Potência: 168 cv <br>
+                Tração: Traseira <br>
+                Manual 5 marchas <br>
+                Velocidade máxima: ~210–215 km/h <br>
+                0–100 km/h: ~9,5–10,5 s <br>
+                Consumo cidade: ~5,5–6 km/l <br>
+                Consumo estrada: ~8,5–9,5 km/l <br>
+                Tanque: 75 litros <br>
+                Comprimento: ~4.745 mm <br>
+                Largura: ~1.760 mm <br>
+                Entre-eixos: ~2.730 mm <br>
+                Peso: ~1.500–1.550 kg <br>
+                Direção hidráulica <br>
+                Desembaçador traseiro <br>
+                Porta-malas: 540 litros <br>
+            </p>
+        </div>
+    </div>
 
-        <section class="caravan">
-            <h2>Caravan Comodoro 1990</h2>
-            <img src="imgs/caravan.png" alt="Caravan">
-
-            <div class="caravan-texto">
-                <p>
-                    Modelo: Chevrolet Caravan Comodoro 1990 <br>
-                    Perua 2 portas <br>
-                    Motor: 6 cilindros em linha 4.1 (SFI) <br>
-                    Potência: 168 cv <br>
-                    Tração: Traseira <br>
-                    Manual 5 marchas <br>
-                    Velocidade máxima: ~210–215 km/h <br>
-                    0–100 km/h: ~9,5–10,5 s <br>
-                    Consumo cidade: ~5,5–6 km/l <br>
-                    Consumo estrada: ~8,5–9,5 km/l <br>
-                    Tanque: 75 litros <br>
-                    Comprimento: ~4.745 mm <br>
-                    Largura: ~1.760 mm <br>
-                    Entre-eixos: ~2.730 mm <br>
-                    Peso: ~1.500–1.550 kg <br>
-                    Direção hidráulica <br>
-                    Banco do motorista com regulagem elétrica (em algumas versões) <br>
-                    Desembaçador traseiro <br>
-                    Rádio original com equalizador <br>
-                    Porta-malas: 540 litros <br>
-                </p>
-            </div>
-        </section>
-        
-        <section class="omegasuprema">
-         <h2>Omega Suprema CD 4.1</h2>
-          <img src="imgs/omegasuprema.png" alt="">
-            <div class="omegasuprema-texto">
-               <p>Chevrolet Omega Suprema CD <br>
-                Motor:6 cilindros em linha <br>
-                168 cv (4.1) <br>
+    <!-- OMEGA SUPREMA -->
+    <div class="card">
+        <h2>Omega Suprema CD 4.1</h2>
+        <img src="imgs/omegasuprema.png" alt="Omega Suprema" onclick="toggle('suprema')">
+        <div id="suprema" class="info">
+            <p>
+                Chevrolet Omega Suprema CD <br>
+                Motor: 6 cilindros em linha 4.1 <br>
+                168 cv <br>
                 Tração: traseira <br>
                 Câmbio: manual de 5 marchas ou automático de 4 marchas <br>
                 Velocidade máxima: ~195–220 km/h <br>
-                0–100 km/h: ~8,5–11 s (varia conforme motor) <br>
+                0–100 km/h: ~8,5–11 s <br>
                 Consumo cidade: ~6–8 km/l <br>
                 Consumo estrada: ~9–12 km/l <br>
                 Tanque: 65 litros <br>
@@ -96,48 +95,61 @@
                 Peso: ~1.350–1.550 kg <br>
                 Direção hidráulica <br>
                 Freios a disco na dianteira <br>
-               </p>
+            </p>
+        </div>
+    </div>
 
-            </div>
-
-        </section>
-
-         <section class="chevette">
-          <h2>Chevette SL/E 1990</h2>
-           <img src="imgs/chevettefundo.png" alt="">
-            <div class="chevette texto">
-              <p>Modelo: Chevrolet Chevette <br>
+    <!-- CHEVETTE -->
+    <div class="card">
+        <h2>Chevette SL/E 1990</h2>
+        <img src="imgs/chevettefundo.png" alt="Chevette" onclick="toggle('chevette')">
+        <div id="chevette" class="info">
+            <p>
+                Modelo: Chevrolet Chevette <br>
                 Carroceria: Sedan 2 portas <br>
-                Motor: 4 cilindros em linha <br>
-                Cilindrada: 1.6 litros <br>
+                Motor: 4 cilindros em linha 1.6 <br>
                 Potência: 80 cv <br>
                 Torque: 12 kgfm <br>
                 Tração: traseira <br>
                 Câmbio: 5 marchas <br>
                 Velocidade máxima: ~150–165 km/h <br>
                 0–100 km/h: ~14–17 s <br>
-                Consumo cidade: ~8–10 km/l  <br>
+                Consumo cidade: ~8–10 km/l <br>
                 Consumo estrada: ~11–14 km/l <br>
                 Tanque: 50 litros <br>
                 Comprimento: ~4.120 mm <br>
                 Largura: ~1.570 mm <br>
                 Altura: ~1.340 mm <br>
                 Entre-eixos: ~2.390 mm <br>
-                Peso: ~900–980 kg  <br>
+                Peso: ~900–980 kg <br>
                 Freios a disco na dianteira <br>
                 Direção mecânica <br>
-                Bancos em tecido <br>
-                Desembaçador traseiro <br>
-                Painel simples com marcador de combustível e temperatura <br>
-                Porta-malas ~300 litros <br>                
-              </p> 
-
-           </div>
-         </section>
-
+                Porta-malas ~300 litros <br>
+            </p>
+        </div>
     </div>
 
-</section>
+</div>
+
+<script>
+function toggle(id) {
+
+    const info = document.getElementById(id);
+    const isOpen = info.style.display === "block";
+
+    // Fecha todos
+    document.querySelectorAll(".info").forEach(function(item) {
+        item.style.display = "none";
+    });
+
+    // Se não estava aberto, abre
+    if (!isOpen) {
+        info.style.display = "block";
+    }
+}
+</script>
+
+
 
 </body>
 </html>
