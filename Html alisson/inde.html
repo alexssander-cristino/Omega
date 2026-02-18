@@ -128,6 +128,99 @@
             </p>
         </div>
     </div>
+    
+    <div class="card">
+        <h2>Opala Comodoro 1992</h2>
+        <img src="imgs/opalafundo.png" alt="opala" onclick="toggle('opala')">
+        <div id="opala" class="info">
+           <p>
+                Chevrolet Opala Comodoro <br>
+                6 cilindros 4.1 (Gasolina) <br>
+                Motor: 4.1L, 6 em linha, carburado <br>
+                Potência: ~135–140 cv <br>
+                Torque: ~29 kgfm <br>
+                Tração: traseira <br>
+                Câmbio: manual 4/5 marchas <br>
+                Comprimento: 4.69 m <br>
+                Largura: 1.75 m <br>
+                Entre-eixos: 2.66 m <br>
+                Peso: ~1.300 kg (varia versão) <br>
+                Bancos em veludo <br>
+                Encosto de cabeça traseiro <br>
+                Direção hidráulica <br>
+                Painel com acabamento imitando madeira <br>
+                Rodas esportivas aro 14 <br>
+                0–100 km/h: ~11 segundos <br>
+                Velocidade máxima: ~180 km/h <br>
+                Cidade: 5–7 km/l <br>
+                Estrada: 8–10 km/l <br>
+           </p>
+        </div>
+
+
+    </div>
+
+    <div class="card2">
+        <h2>Passt LS 1980</h2>
+        <img src="imgs/passatfundo.png" alt="passat" onclick="toggle('passat')">
+        <div id="passat" class="info">
+         <p>
+              Volkswagen Passat <br>
+              1.8 AP <br>
+              4 cilindros, 8v, carburado <br>
+              Potência: ~92–99 cv <br>
+              Torque: ~15 kgfm <br>
+              Tração: dianteira <br>
+              Câmbio: manual 4 ou 5 marchas <br>
+              Freios: disco dianteiro / tambor traseiro <br>
+              Comprimento: ~4,19 m <br>
+              Entre-eixos: 2,47 m <br>  
+              Peso: ~950–1.050 kg <br>
+              Porta-malas: ~450 litros <br>
+              Bancos esportivos (TS) <br>
+              Conta-giros no painel <br>
+              Console central <br>
+              Direção mecânica (hidráulica em alguns casos) <br>
+              0–100 km/h: ~10–11 segundos <br>
+              Velocidade máxima: ~175–185 km/h <br>
+              Cidade: 6–8 km/l <br>
+              Estrada: 10–12 km/l <br>
+         </p>   
+        </div>
+</div>
+
+    <div class="card2">
+        <h2>Fusca 1500 1970</h2>
+        <img src="imgs/fuscafundo.png" alt="Fusca" onclick="toggle('Fusca')"> 
+        <div id="Fusca" class="info">
+            <p>
+                Volkswagen Fusca 1500 
+                Motor: 4 cilindros boxer <br>
+                Cilindrada: 1.493 cm³ <br>
+                Potência: ~52 cv <br>
+                Torque: ~10,5 kgfm <br>
+                Tração: traseira <br>
+                Câmbio: manual 4 marchas <br> 
+                Arrefecimento: a ar <br>
+                Velocidade máxima: ~135km/h <br>
+                0–100 km/h: ~23–25 segundos <br>
+                Consumo cidade: ~8–10 km/l <br>
+                Consumo estrada: ~11–13 km/l <br>
+                Comprimento: ~4,07 m <br>
+                Largura: ~1,55 m <br>
+                Altura: ~1,50 m <br>
+                Entre-eixos: 2,40 m <br>
+                Peso: ~800–850 kg <br>
+                Porta-malas dianteiro: ~140 litros <br>
+                Bancos simples em vinil <br>
+                Painel metálico pintado <br>
+                Direção mecânica <br>
+                Ventilação por alavancas no painel <br>
+                Desembaçador traseiro (alguns modelos) <br>
+            </p>
+        </div>
+
+</div>
 
 </div>
 
@@ -135,19 +228,50 @@
 function toggle(id) {
 
     const info = document.getElementById(id);
-    const isOpen = info.style.display === "block";
+    const card = info.closest(".card, .card2");
+    const titulo = card.querySelector("h2").innerText;
+    const imagem = card.querySelector("img").src;
 
-    // Fecha todos
-    document.querySelectorAll(".info").forEach(function(item) {
-        item.style.display = "none";
+    // Remove modal existente
+    const existente = document.querySelector(".modal-overlay");
+    if (existente) existente.remove();
+
+    // Fundo escuro
+    const overlay = document.createElement("div");
+    overlay.classList.add("modal-overlay");
+
+    // Caixa modal
+    const modal = document.createElement("div");
+    modal.classList.add("modal-box");
+
+    // Botão fechar
+    const fechar = document.createElement("span");
+    fechar.innerHTML = "&times;";
+    fechar.classList.add("modal-close");
+    fechar.onclick = () => overlay.remove();
+
+    // Criar conteúdo
+    modal.innerHTML = `
+        <span class="modal-close">&times;</span>
+        <h2>${titulo}</h2>
+        <img src="${imagem}" style="width:100%; border-radius:10px; margin-bottom:15px;">
+        <div>${info.innerHTML}</div>
+    `;
+
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+
+    // Fecha clicando fora
+    overlay.addEventListener("click", function(e) {
+        if (e.target === overlay) overlay.remove();
     });
 
-    // Se não estava aberto, abre
-    if (!isOpen) {
-        info.style.display = "block";
-    }
+    // Fecha clicando no X
+    modal.querySelector(".modal-close").onclick = () => overlay.remove();
 }
 </script>
+
+
 
 
 
