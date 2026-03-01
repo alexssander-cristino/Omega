@@ -103,4 +103,18 @@ body {
     font-size: 28px;
     cursor: pointer;
 }
+     
+a {
+   
+    position: fixed;
+    bottom: 20px;   /* distância de baixo */
+    left: 20px;     /* distância da esquerda */
+    padding: 10px 15px;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+}
 
+.img {
+    border-radius: 20px;
+}
